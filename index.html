@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin's Phone Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef6ff;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0066ff,#00b4ff);
+    color:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#dff6ff;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 8%;
+    background:linear-gradient(135deg,#007bff,#42c5ff);
+    color:white;
+}
+
+.hero-text{
+    max-width:520px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:white;
+    color:#007bff;
+    padding:15px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.hero img{
+    width:380px;
+}
+
+.products{
+    padding:80px 8%;
+}
+
+.products h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:38px;
+    color:#0066ff;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#0066ff;
+}
+
+.price{
+    color:#0099ff;
+    font-size:22px;
+    font-weight:700;
+    margin:15px 0;
+}
+
+.buy{
+    display:inline-block;
+    background:#007bff;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:30px;
+}
+
+.features{
+    background:white;
+    padding:80px 8%;
+}
+
+.features h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0066ff;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:#f3f9ff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.feature h3{
+    color:#007bff;
+    margin:15px 0;
+}
+
+footer{
+    background:#0056d6;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero img{
+    margin-top:40px;
+    width:280px;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">📱 Justin's Phone Store</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Produk</a>
+<a href="#">Promo</a>
+<a href="#">Kontak</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+<h1>Temukan Smartphone Impianmu</h1>
+
+<p>
+Justin's Phone Store menyediakan smartphone terbaru
+dengan harga terbaik, garansi resmi, dan pengiriman cepat.
+</p>
+
+<a href="#" class="btn">Belanja Sekarang</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="Phone">
+
+</section>
+
+<section class="products">
+
+<h2>Produk Terlaris</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600">
+<div class="card-content">
+<h3>iPhone 16 Pro</h3>
+<p>Chip super cepat dan kamera profesional.</p>
+<div class="price">Rp18.999.000</div>
+<a href="#" class="buy">Beli</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600">
+<div class="card-content">
+<h3>Samsung Galaxy S25</h3>
+<p>Layar AMOLED premium dan performa luar biasa.</p>
+<div class="price">Rp15.499.000</div>
+<a href="#" class="buy">Beli</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600">
+<div class="card-content">
+<h3>Google Pixel</h3>
+<p>Kamera AI terbaik dengan Android murni.</p>
+<div class="price">Rp11.999.000</div>
+<a href="#" class="buy">Beli</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>Mengapa Memilih Kami?</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>🚚 Gratis Ongkir</h3>
+<p>Pengiriman cepat ke seluruh Indonesia.</p>
+</div>
+
+<div class="feature">
+<h3>🛡 Garansi Resmi</h3>
+<p>Semua produk bergaransi resmi.</p>
+</div>
+
+<div class="feature">
+<h3>💳 Pembayaran Aman</h3>
+<p>Mendukung berbagai metode pembayaran.</p>
+</div>
+
+<div class="feature">
+<h3>⭐ Produk Original</h3>
+<p>100% asli dan berkualitas tinggi.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Justin's Phone Store</h3>
+
+<p>© 2026 Justin's Phone Store. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,323 +1,390 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Justin's Phone Store</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#eef6ff;
-    color:#222;
-}
-
-header{
-    background:linear-gradient(135deg,#0066ff,#00b4ff);
-    color:white;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:100;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-}
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:30px;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#dff6ff;
-}
-
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:80px 8%;
-    background:linear-gradient(135deg,#007bff,#42c5ff);
-    color:white;
-}
-
-.hero-text{
-    max-width:520px;
-}
-
-.hero h1{
-    font-size:55px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:18px;
-    line-height:1.7;
-    margin-bottom:30px;
-}
-
-.btn{
-    background:white;
-    color:#007bff;
-    padding:15px 35px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 20px rgba(0,0,0,.2);
-}
-
-.hero img{
-    width:380px;
-}
-
-.products{
-    padding:80px 8%;
-}
-
-.products h2{
-    text-align:center;
-    margin-bottom:50px;
-    font-size:38px;
-    color:#0066ff;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 15px 30px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
-}
-
-.card h3{
-    margin-bottom:10px;
-    color:#0066ff;
-}
-
-.price{
-    color:#0099ff;
-    font-size:22px;
-    font-weight:700;
-    margin:15px 0;
-}
-
-.buy{
-    display:inline-block;
-    background:#007bff;
-    color:white;
-    text-decoration:none;
-    padding:12px 22px;
-    border-radius:30px;
-}
-
-.features{
-    background:white;
-    padding:80px 8%;
-}
-
-.features h2{
-    text-align:center;
-    margin-bottom:40px;
-    color:#0066ff;
-}
-
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.feature{
-    background:#f3f9ff;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-}
-
-.feature h3{
-    color:#007bff;
-    margin:15px 0;
-}
-
-footer{
-    background:#0056d6;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-
-@media(max-width:900px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero img{
-    margin-top:40px;
-    width:280px;
-}
-
-.hero h1{
-    font-size:42px;
-}
-
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin's Phone Store</title>
+  <meta name="description" content="Premium smartphones with official warranty, free shipping, and secure payment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
 
-<header>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo">
+        <span class="logo-icon">📱</span>
+        <span>Justin's Phone Store</span>
+      </a>
 
-<div class="logo">📱 Justin's Phone Store</div>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Produk</a>
-<a href="#">Promo</a>
-<a href="#">Kontak</a>
-</nav>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#products">Produk</a>
+        <a href="#brands">Brand</a>
+        <a href="#reviews">Review</a>
+        <a href="#contact">Kontak</a>
+      </nav>
 
-</header>
+      <button class="cart-btn" aria-label="Shopping cart">
+        🛒
+        <span class="cart-count">3</span>
+      </button>
+    </div>
+  </header>
 
-<section class="hero">
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">⭐ Dipercaya 10.000+ pelanggan di Indonesia</div>
+          <h1>Premium Smartphones, Harga Lebih Baik, Pengiriman Lebih Cepat.</h1>
+          <p>
+            Temukan iPhone, Samsung, dan Google Pixel terbaru dengan garansi resmi,
+            gratis ongkir, dan dukungan pelanggan 24/7.
+          </p>
 
-<div class="hero-text">
-<h1>Temukan Smartphone Impianmu</h1>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+            <a href="#deals" class="btn btn-secondary">Lihat Promo</a>
+          </div>
 
-<p>
-Justin's Phone Store menyediakan smartphone terbaru
-dengan harga terbaik, garansi resmi, dan pengiriman cepat.
-</p>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <strong>4.9/5</strong>
+              <span>Rating Pelanggan</span>
+            </div>
+            <div class="trust-item">
+              <strong>24 Jam</strong>
+              <span>Pengiriman Cepat</span>
+            </div>
+            <div class="trust-item">
+              <strong>100%</strong>
+              <span>Produk Original</span>
+            </div>
+          </div>
+        </div>
 
-<a href="#" class="btn">Belanja Sekarang</a>
+        <div class="hero-visual reveal">
+          <div class="phone-card floating">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&q=80" alt="Premium smartphone" />
+          </div>
+          <div class="floating-badge badge-1">⚡ Fast Delivery</div>
+          <div class="floating-badge badge-2">🛡 Official Warranty</div>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="search-section">
+      <div class="container search-card reveal">
+        <div class="search-input">
+          <span>🔍</span>
+          <input type="text" id="searchInput" placeholder="Cari smartphone impianmu..." />
+        </div>
 
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="Phone">
+        <div class="filters">
+          <button class="filter-chip active" data-filter="all">Semua</button>
+          <button class="filter-chip" data-filter="apple">Apple</button>
+          <button class="filter-chip" data-filter="samsung">Samsung</button>
+          <button class="filter-chip" data-filter="google">Google</button>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="stats">
+      <div class="container stats-grid reveal">
+        <div class="stat-card">
+          <h3 data-target="10000">0</h3>
+          <p>Pelanggan Puas</p>
+        </div>
+        <div class="stat-card">
+          <h3 data-target="500">0</h3>
+          <p>Produk Tersedia</p>
+        </div>
+        <div class="stat-card">
+          <h3 data-target="24">0</h3>
+          <p>Jam Pengiriman</p>
+        </div>
+        <div class="stat-card">
+          <h3 data-target="4.9">0</h3>
+          <p>Rating Toko</p>
+        </div>
+      </div>
+    </section>
 
-<section class="products">
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">Produk Unggulan</span>
+          <h2>Smartphone Terlaris</h2>
+          <p>Pilih perangkat terbaik untuk produktivitas, fotografi, gaming, dan hiburan.</p>
+        </div>
 
-<h2>Produk Terlaris</h2>
+        <div class="product-grid">
+          <article class="product-card reveal" data-category="apple">
+            <div class="product-badge">🔥 Best Seller</div>
+            <button class="wishlist-btn" aria-label="Tambah ke wishlist">♡</button>
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=900&q=80" alt="iPhone 16 Pro" />
+            </div>
+            <div class="product-body">
+              <div class="product-rating">★★★★★ <span>(562)</span></div>
+              <h3>iPhone 16 Pro</h3>
+              <p>Chip super cepat, kamera profesional, dan layar ProMotion premium.</p>
+              <div class="product-meta">
+                <span>✓ Garansi Resmi</span>
+                <span>✓ Gratis Ongkir</span>
+              </div>
+              <div class="product-footer">
+                <div class="price">Rp18.999.000</div>
+                <button class="btn btn-primary small add-cart">Tambah</button>
+              </div>
+            </div>
+          </article>
 
-<div class="grid">
+          <article class="product-card reveal" data-category="samsung">
+            <div class="product-badge">⚡ Promo</div>
+            <button class="wishlist-btn" aria-label="Tambah ke wishlist">♡</button>
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=900&q=80" alt="Samsung Galaxy S25" />
+            </div>
+            <div class="product-body">
+              <div class="product-rating">★★★★★ <span>(421)</span></div>
+              <h3>Samsung Galaxy S25</h3>
+              <p>Layar AMOLED premium dan performa flagship untuk semua kebutuhan.</p>
+              <div class="product-meta">
+                <span>✓ Garansi Resmi</span>
+                <span>✓ Gratis Ongkir</span>
+              </div>
+              <div class="product-footer">
+                <div class="price">Rp15.499.000</div>
+                <button class="btn btn-primary small add-cart">Tambah</button>
+              </div>
+            </div>
+          </article>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600">
-<div class="card-content">
-<h3>iPhone 16 Pro</h3>
-<p>Chip super cepat dan kamera profesional.</p>
-<div class="price">Rp18.999.000</div>
-<a href="#" class="buy">Beli</a>
-</div>
-</div>
+          <article class="product-card reveal" data-category="google">
+            <div class="product-badge">📸 Kamera Terbaik</div>
+            <button class="wishlist-btn" aria-label="Tambah ke wishlist">♡</button>
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=900&q=80" alt="Google Pixel" />
+            </div>
+            <div class="product-body">
+              <div class="product-rating">★★★★★ <span>(308)</span></div>
+              <h3>Google Pixel</h3>
+              <p>Fotografi AI terbaik dengan pengalaman Android murni dan update cepat.</p>
+              <div class="product-meta">
+                <span>✓ Garansi Resmi</span>
+                <span>✓ Gratis Ongkir</span>
+              </div>
+              <div class="product-footer">
+                <div class="price">Rp11.999.000</div>
+                <button class="btn btn-primary small add-cart">Tambah</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600">
-<div class="card-content">
-<h3>Samsung Galaxy S25</h3>
-<p>Layar AMOLED premium dan performa luar biasa.</p>
-<div class="price">Rp15.499.000</div>
-<a href="#" class="buy">Beli</a>
-</div>
-</div>
+    <section class="brands" id="brands">
+      <div class="container reveal">
+        <div class="section-heading">
+          <span class="section-label">Brand Premium</span>
+          <h2>Merek yang Tersedia</h2>
+        </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600">
-<div class="card-content">
-<h3>Google Pixel</h3>
-<p>Kamera AI terbaik dengan Android murni.</p>
-<div class="price">Rp11.999.000</div>
-<a href="#" class="buy">Beli</a>
-</div>
-</div>
+        <div class="brand-grid">
+          <div class="brand-card">🍎 Apple</div>
+          <div class="brand-card">📱 Samsung</div>
+          <div class="brand-card">🤖 Google</div>
+          <div class="brand-card">⚡ Xiaomi</div>
+          <div class="brand-card">🎮 ASUS ROG</div>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="features" id="deals">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">Keunggulan Kami</span>
+          <h2>Mengapa Memilih Kami?</h2>
+          <p>Kami fokus memberikan pengalaman belanja smartphone yang aman, cepat, dan terpercaya.</p>
+        </div>
 
-</section>
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">🚚</div>
+            <h3>Gratis Ongkir</h3>
+            <p>Pengiriman cepat ke seluruh Indonesia dengan estimasi 1-2 hari kerja untuk kota besar.</p>
+          </div>
 
-<section class="features">
+          <div class="feature-card reveal">
+            <div class="feature-icon">🛡</div>
+            <h3>Garansi Resmi</h3>
+            <p>Semua produk berasal dari distributor resmi dan dilengkapi garansi pabrikan.</p>
+          </div>
 
-<h2>Mengapa Memilih Kami?</h2>
+          <div class="feature-card reveal">
+            <div class="feature-icon">💳</div>
+            <h3>Pembayaran Aman</h3>
+            <p>Mendukung transfer bank, kartu kredit, e-wallet, dan pembayaran cicilan.</p>
+          </div>
 
-<div class="feature-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">⭐</div>
+            <h3>100% Original</h3>
+            <p>Setiap perangkat telah melalui proses pengecekan kualitas sebelum dikirim ke pelanggan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="feature">
-<h3>🚚 Gratis Ongkir</h3>
-<p>Pengiriman cepat ke seluruh Indonesia.</p>
-</div>
+    <section class="testimonials" id="reviews">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">Review Pelanggan</span>
+          <h2>Apa Kata Mereka?</h2>
+        </div>
 
-<div class="feature">
-<h3>🛡 Garansi Resmi</h3>
-<p>Semua produk bergaransi resmi.</p>
-</div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card reveal">
+            <div class="quote">★★★★★</div>
+            <p>"iPhone saya sampai dalam waktu kurang dari 24 jam dan kondisinya benar-benar baru."</p>
+            <div class="author">
+              <strong>Rizky Pratama</strong>
+              <span>Jakarta</span>
+            </div>
+          </div>
 
-<div class="feature">
-<h3>💳 Pembayaran Aman</h3>
-<p>Mendukung berbagai metode pembayaran.</p>
-</div>
+          <div class="testimonial-card reveal">
+            <div class="quote">★★★★★</div>
+            <p>"Pelayanan customer service sangat membantu saat saya memilih Samsung yang sesuai kebutuhan."</p>
+            <div class="author">
+              <strong>Sarah Wijaya</strong>
+              <span>Bandung</span>
+            </div>
+          </div>
 
-<div class="feature">
-<h3>⭐ Produk Original</h3>
-<p>100% asli dan berkualitas tinggi.</p>
-</div>
+          <div class="testimonial-card reveal">
+            <div class="quote">★★★★★</div>
+            <p>"Produk original, harga kompetitif, dan packing pengiriman sangat aman. Recommended!"</p>
+            <div class="author">
+              <strong>Daniel Santoso</strong>
+              <span>Surabaya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="newsletter" id="contact">
+      <div class="container">
+        <div class="newsletter-card reveal">
+          <div class="newsletter-copy">
+            <span class="section-label">Promo Eksklusif</span>
+            <h2>Dapatkan Penawaran Terbaik Setiap Minggu</h2>
+            <p>Masukkan email Anda untuk mendapatkan diskon, info flash sale, dan produk terbaru.</p>
+          </div>
 
-</section>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Alamat email" required />
+            <button type="submit" class="btn btn-primary">Berlangganan</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-<footer>
+    <section class="faq">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">FAQ</span>
+          <h2>Pertanyaan yang Sering Diajukan</h2>
+        </div>
 
-<h3>Justin's Phone Store</h3>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              Apakah semua produk bergaransi resmi?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Ya, seluruh smartphone yang kami jual dilengkapi garansi resmi distributor atau pabrikan sesuai ketentuan masing-masing merek.
+            </div>
+          </div>
 
-<p>© 2026 Justin's Phone Store. All Rights Reserved.</p>
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              Berapa lama proses pengiriman?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Untuk wilayah Jabodetabek biasanya 1 hari kerja, sedangkan kota besar lainnya sekitar 1-3 hari kerja tergantung layanan ekspedisi.
+            </div>
+          </div>
 
-</footer>
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              Apakah tersedia cicilan?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Tersedia cicilan melalui kartu kredit dan beberapa layanan paylater serta e-wallet yang bekerja sama dengan kami.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="logo footer-logo">
+          <span class="logo-icon">📱</span>
+          <span>Justin's Phone Store</span>
+        </a>
+        <p>Premium smartphone store dengan garansi resmi, pengiriman cepat, dan layanan pelanggan terbaik di Indonesia.</p>
+      </div>
+
+      <div>
+        <h4>Produk</h4>
+        <a href="#products">Smartphone</a>
+        <a href="#brands">Brand</a>
+        <a href="#deals">Promo</a>
+      </div>
+
+      <div>
+        <h4>Bantuan</h4>
+        <a href="#">Garansi</a>
+        <a href="#">Pengiriman</a>
+        <a href="#">Pembayaran</a>
+      </div>
+
+      <div>
+        <h4>Kontak</h4>
+        <a href="mailto:hello@justinphonestore.com">hello@justinphonestore.com</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Justin's Phone Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
